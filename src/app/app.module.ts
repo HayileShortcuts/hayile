@@ -8,6 +8,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SearcherComponent } from './components/searcher/searcher.component';
 import { TitleComponent } from './components/title/title.component';
 import { BodyComponent } from './components/body/body.component';
+import { ShortcutsBoxComponent } from './shortcuts-box/shortcuts-box.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BodyComponent } from './components/body/body.component';
     SidebarComponent,
     SearcherComponent,
     TitleComponent,
-    BodyComponent
+    BodyComponent,
+    ShortcutsBoxComponent
   ],
   imports: [
     BrowserModule,

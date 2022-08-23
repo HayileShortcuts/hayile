@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@import "https://fonts.googleapis.com/css2?family=Jura&display=swap%27";
+
+@font-face {
+  font-family: EspressoMono-Regular;
+  src: url("./assets/fonts/EspressoMono-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: EspressoMono-Bold;
+  src: url("./assets/fonts/EspressoMono-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Jura, sans-serif;
+  font-size: var(--mobile-font-size);
+  background: var(--bg-color);
+  color: var(--terciary-color);
+  min-height: 100vh;
+}
