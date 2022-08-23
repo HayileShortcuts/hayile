@@ -1,8 +1,4 @@
-.topbar {
-    position: sticky;
-    padding: 0 1.2rem;
-  }
-  
+
   .topbar__container {
     display: flex;
     justify-content: space-between;
@@ -10,13 +6,21 @@
     padding: var(--mobile-padding);
     flex-direction: row;
   }
-
+  .theme {
+    min-width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: none;
+    background: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .theme img {
+    width: 1.7rem;
+  }
   @media screen and (min-width: 1200px) {
-    .topbar {
-      padding: calc(var(--mobile-padding) * 1.5) 0;
-      display: block;
-    }
-  
+
     .topbar__container {
       padding: 0 calc(var(--mobile-padding) * 6);
       max-width: 1300px;

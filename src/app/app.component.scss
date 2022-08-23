@@ -1,7 +1,78 @@
-.content {
-  padding: var(--mobile-padding);
-}
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Jura&display=swap%27";
 
+// @font-face {
+//   font-family: EspressoMono-Regular;
+//   src: url("./assets/fonts/EspressoMono-Regular.ttf");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: EspressoMono-Bold;
+//   src: url("./assets/fonts/EspressoMono-Bold.ttf");
+//   font-weight: bold;
+//   font-style: normal;
+// }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Poppins, sans-serif;
+  font-size: var(--mobile-font-size);
+  background: var(--bg-color);
+  color: var(--terciary-color);
+  min-height: 100vh;
+}
+.topbar {
+  position: sticky;
+  padding: 0 0.5rem 0 0.7rem;
+}
+.shortcuts__container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+}
+.sidebar {
+  display: none;
+  font-family: Jura, sans-serif;
+  font-weight: 400;
+}
+.title {
+  grid-area: 1 / 2 / 2 / 3;
+}
 @media screen and (min-width: 1200px) {
- 
+  .content {
+    padding: calc(var(--mobile-padding) * 1.5) calc(var(--mobile-padding) * 6);
+    display: grid;
+    grid-template-columns: 1.5fr 4fr;
+    grid-template-rows: 0.5fr 4fr;
+    grid-column-gap: 3rem;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .topbar {
+    padding: calc(var(--mobile-padding) * 1.5) 0;
+    display: block;
+  }
+    .title {
+      grid-area: 1 / 2 / 2 / 3;
+      justify-content: flex-end;
+      gap: 2rem;
+      margin-right: 1rem;
+    }
+  
+    .sidebar {
+      grid-area: 2 / 1 / 3 / 2;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .shortcuts {
+      grid-area: 2 / 2 / 3 / 3;
+    }
 }
