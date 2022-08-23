@@ -7,7 +7,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SearcherComponent } from './components/searcher/searcher.component';
 import { TitleComponent } from './components/title/title.component';
-import { BodyComponent } from './components/body/body.component';
 import { ShortcutsBoxComponent } from './components/shortcuts-box/shortcuts-box.component';
 
 
@@ -18,7 +17,6 @@ import { ShortcutsBoxComponent } from './components/shortcuts-box/shortcuts-box.
     SidebarComponent,
     SearcherComponent,
     TitleComponent,
-    BodyComponent,
     ShortcutsBoxComponent
   ],
   imports: [
