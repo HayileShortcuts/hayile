@@ -1,3 +1,10 @@
+.shortcuts__file {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  height: 60vh;
+  overflow-y: scroll;
+}
 .file__section {
     padding-left: calc(var(--mobile-font-size) / 2);
   }

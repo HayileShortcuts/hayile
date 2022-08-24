@@ -22,9 +22,25 @@
 }
 
 body {
-  font-family: poppins, sans-serif;
+  font-family: 'Jura', sans-serif;
   font-size: 1rem;
   color: #0b2034;
   background: none;
   min-height: 100vh;
+}
+
+@media screen and (min-width: 1200px) {
+  ::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 0.6rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 0.6rem;
+  }
 }

@@ -1,38 +1,7 @@
-.shortcuts__container {
-    display: flex;
-    flex-direction: column;
-    border-radius: 0.5rem;
-    align-items: center;
-  }
-  
-  .shortcuts__file {
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    height: 60vh;
-  }
-  
-  .shortcuts__searcher {
-    width: 95%;
-    border-radius: 2rem;
-    display: flex;
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    box-shadow: -1px 2px 4px 0 rgb(0 0 0 / 12%);
-    box-sizing: border-box;
-    margin-top: 15px;
-    
-  }
-  
   #input-search {
     width: 100%;
     border: none;
     outline: none;
     background: none;
+    margin-left: 1.2em;
   }
-  
-  #input-search::placeholder {
-    font-family: Poppins, sans-serif;
-  }
-  
