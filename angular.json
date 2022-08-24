@@ -32,7 +32,7 @@
             ], 
             "stylePreprocessorOptions": {
               "includePaths": [
-                "src/styles"
+                "src/app/styles"
               ]
               } 
             ,
