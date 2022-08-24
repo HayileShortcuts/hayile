@@ -43,15 +43,15 @@
 
 @media screen and (min-width: 1200px) {
   .content {
-    padding: calc(var(--mobile-padding) * 1.5) calc(var(--mobile-padding) * 6);
     display: grid;
     grid-template-columns: 1.5fr 4fr;
     grid-column-gap: 3rem;
     max-width: 1300px;
     margin: 0 auto;
-  }
+    padding: 0 10%;
+}
   .topbar {
-    padding: calc(var(--mobile-padding) * 1.5) 0;
+    padding: 30px 0;
     display: block;
   }
     .title {
