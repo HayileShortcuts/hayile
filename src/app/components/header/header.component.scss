@@ -11,7 +11,7 @@
     height: 2.5rem;
     border-radius: 50%;
     border: none;
-    background: var(--secondary-color);
+    background: #887f8e66;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +22,7 @@
   @media screen and (min-width: 1200px) {
 
     .topbar__container {
-      padding: 0 calc(var(--mobile-padding) * 6);
+      padding: 1.2rem;
       max-width: 1300px;
       margin: 0 auto;
     }
