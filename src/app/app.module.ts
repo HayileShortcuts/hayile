@@ -8,7 +8,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SearcherComponent } from './components/searcher/searcher.component';
 import { TitleComponent } from './components/title/title.component';
 import { ShortcutsBoxComponent } from './components/shortcuts-box/shortcuts-box.component';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import { ShortcutsBoxComponent } from './components/shortcuts-box/shortcuts-box.
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
