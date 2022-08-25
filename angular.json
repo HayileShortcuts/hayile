@@ -106,6 +106,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/hayile",
+            "netlifyToken": "camejo",
+            "siteId": ""
+          }
         }
       }
     }
