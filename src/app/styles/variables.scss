@@ -13,38 +13,18 @@
   --quaternary-color-dark: #7f3fa6;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: var(--bg-color-dark);
-    --main-color: var(--main-color-dark);
-    --secondary-color: var(--secondary-color-dark);
-    --terciary-color: var(--terciary-color-dark);
-    --quaternary-color: var(--quaternary-color-dark);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg-color: var(--bg-color-light);
-    --main-color: var(--main-color-light);
-    --secondary-color: var(--secondary-color-light);
-    --terciary-color: var(--terciary-color-light);
-    --quaternary-color: var(--quaternary-color-light);
-  }
-}
-
-[color-scheme="dark"] {
-  --bg-color: var(--bg-color-dark);
-  --main-color: var(--main-color-dark);
-  --secondary-color: var(--secondary-color-dark);
-  --terciary-color: var(--terciary-color-dark);
-  --quaternary-color: var(--quaternary-color-dark);
-}
-
-[color-scheme="light"] {
+.light-theme {
   --bg-color: var(--bg-color-light);
   --main-color: var(--main-color-light);
   --secondary-color: var(--secondary-color-light);
   --terciary-color: var(--terciary-color-light);
   --quaternary-color: var(--quaternary-color-light);
+}
+
+.dark-theme {
+  --bg-color: var(--bg-color-dark);
+  --main-color: var(--main-color-dark);
+  --secondary-color: var(--secondary-color-dark);
+  --terciary-color: var(--terciary-color-dark);
+  --quaternary-color: var(--quaternary-color-dark);
 }
