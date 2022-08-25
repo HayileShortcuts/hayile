@@ -2,6 +2,7 @@
   position: sticky;
   padding: 0 0.5rem 0 0.7rem;
 }
+
 .title {
   display: flex;
   align-items: center;
@@ -9,19 +10,23 @@
   gap: 1.5rem;
   margin: 0 1rem 1rem 0;
 }
+
 .sidebar {
   display: none;
   font-weight: 400;
 }
+
 .content {
   padding: 1rem;
 }
+
 .shortcuts__container {
   display: flex;
   flex-direction: column;
   border-radius: 0.5rem;
   height: 700px;
 }
+
 .shortcuts__searcher {
   width: auto;
   border-radius: 2rem;
@@ -34,6 +39,7 @@
   background: #f6f6f9;
   margin: 0.5rem 0.3rem 2rem;
 }
+
 .shortcuts__file {
   display: flex;
   flex-direction: column;
@@ -49,29 +55,29 @@
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 10%;
-}
+  }
+
   .topbar {
     padding: 30px 0;
     display: block;
   }
-    .title {
-      grid-area: 1 / 2 / 2 / 3;
-      grid-area: 1/2/2/3;
-      justify-content: space-between;
-      gap: 1%;
-      padding-left: 0.8rem;
-    }
-  
-    .sidebar {
-      grid-area: 2 / 1 / 3 / 2;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .shortcuts {
-      grid-area: 2 / 2 / 3 / 3;
-    }
 
-    
+  .title {
+    grid-area: 1 / 2 / 2 / 3;
+    grid-area: 1/2/2/3;
+    justify-content: space-between;
+    gap: 1%;
+    padding-left: 0.8rem;
+  }
+
+  .sidebar {
+    grid-area: 2 / 1 / 3 / 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .shortcuts {
+    grid-area: 2 / 2 / 3 / 3;
+  }
 }

@@ -34,13 +34,13 @@ export class ThemeToggleComponent implements OnInit {
 
   toggleHayileLogo() {
     this.theme === 'light-theme'
-      ? this.renderer.setAttribute(this.hayileLogo, 'src', '../../../assets/icons/HAYILE.svg')
-      : this.renderer.setAttribute(this.hayileLogo, 'src', '../../../assets/icons/hayile-white-logo.svg');
+      ? this.renderer.setAttribute(this.hayileLogo, 'src', '../../../assets/icons/hayile-dark.svg')
+      : this.renderer.setAttribute(this.hayileLogo, 'src', '../../../assets/icons/hayile-light.svg');
   }
 
   themeIcon() {
     return this.theme === 'light-theme'
-      ? '../../../assets/icons/Vector.svg'
-      : '../../../assets/icons/Sun.svg';
+      ? '../../../assets/icons/moon.svg'
+      : '../../../assets/icons/sun.svg';
   }
 }

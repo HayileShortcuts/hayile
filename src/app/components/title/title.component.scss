@@ -1,8 +1,7 @@
 h1 {
-    font-size: 1.5rem;
-    font-weight: 400;
-  }
-
+  font-size: 1.5rem;
+  font-weight: 400;
+}
 
 .titleOS-button {
   display: flex;
@@ -10,21 +9,25 @@ h1 {
   align-content: center;
   justify-content: center;
   align-items: center;
+
+  img {
+    padding: 0.5rem 0.6rem;
+    height: 35px;
+    background: #7f3fa6ee;
+    width: 45px;
+    border-radius: 0.8rem;
+    display: flex;
+    margin-left: 10px;
+    flex-flow: row nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -2px 2px 5px 0 rgb(0 0 0 / 12%);
+  }
 }
 
-.titleOS-button-windows,
-.titleOS-button-mac,
-.titleOS-button-linux {
-  padding: 0.5rem 0.6rem;
-  height: 35px;
-  background: #7f3fa6ee;
-  width: 45px;
-  border-radius: 0.8rem;
-  display: flex;
-  margin-left: 10px;
-  flex-flow: row nowrap;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  box-shadow: -2px 2px 5px 0 rgb(0 0 0 / 12%);
+@media screen and (min-width: 1200px) {
+  img {
+    cursor: pointer;
+  }
 }

@@ -7,8 +7,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  img {
+    width: 1.7rem;
+  }
 }
 
-.theme img {
-  width: 1.7rem;
+@media screen and (min-width: 1200px) {
+  .theme {
+    cursor: pointer;
+  }
 }
