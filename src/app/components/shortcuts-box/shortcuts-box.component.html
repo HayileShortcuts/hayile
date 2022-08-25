@@ -1,4 +1,4 @@
-<ul *ngFor="let dato of dataFromService">
+<ul *ngFor="let dato of dataFromService" class="file__section">
   <div *ngFor="let shortcut of dato.shortcuts">
       <h2>{{ shortcut.tittle }}</h2>
       <li *ngFor="let comando of shortcut.values">

@@ -10,9 +10,9 @@ export class TitleComponent implements OnInit {
 @Output()
 OsSelected = new EventEmitter<string>();
   constructor() { }
-    osSelector(operativeSystem: string){
-      this.OsSelected.emit(operativeSystem)
-      console.log(operativeSystem)
+    osSelector(operatingSystem: string){
+      this.OsSelected.emit(operatingSystem)
+      console.log(operatingSystem)
     }
   ngOnInit(): void {
   }
