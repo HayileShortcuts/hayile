@@ -1,6 +1,6 @@
 <header class="topbar"></header>
 <div class="content">
-  <title (OsSelected)="getOs($event)" class="title"></title>
+  <title (OsSelected)="getOs($event)" [currentlyOs]="selectedSO" class="title"></title>
   <sidebar class="sidebar"></sidebar>
   <div class="shortcuts">
     <div class="shortcuts__container">

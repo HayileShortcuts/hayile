@@ -13,7 +13,7 @@ h1 {
   img {
     padding: 0.5rem 0.6rem;
     height: 35px;
-    background: #7f3fa6ee;
+    background: #887f8e65;
     width: 45px;
     border-radius: 0.8rem;
     display: flex;
@@ -24,6 +24,10 @@ h1 {
     align-items: center;
     box-shadow: -2px 2px 5px 0 rgb(0 0 0 / 12%);
   }
+}
+
+.selected {
+  background: #7f3fa6ee !important;
 }
 
 @media screen and (min-width: 1200px) {

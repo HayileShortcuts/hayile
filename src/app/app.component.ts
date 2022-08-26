@@ -34,9 +34,18 @@ export class AppComponent {
     this.selectedSO = OsToFilter;
     this.dataDisplayed = this.dataReceivedFromService.filter(((e: { operatingSystem: string; }) => e.operatingSystem == this.selectedSO));
     console.log("EStoy cambiando el SO a "+ this.selectedSO);
-    console.log("Este el archivo filtrado por SO");
     console.log(this.dataDisplayed);
   }
+
+  macButton = document.getElementById("macButton")
+  winButton = document.getElementById("windowsButton")
+  linButton = document.getElementById("macButton")
+  
+  // toggleOs(){
+  //   if (this.selectedSO === "Windows"){
+  //     this.winButton.className += "selected"
+  //   }
+  // }
 
 }
 
