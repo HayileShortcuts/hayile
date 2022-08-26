@@ -32,7 +32,10 @@ export class AppComponent {
 
   getOs(OsToFilter: any) {
     this.selectedSO = OsToFilter;
-    console.log("EStoy cambiando el SO")
+    this.dataDisplayed = this.dataReceivedFromService.filter(((e: { operatingSystem: string; }) => e.operatingSystem == this.selectedSO));
+    console.log("EStoy cambiando el SO a "+ this.selectedSO);
+    console.log("Este el archivo filtrado por SO");
+    console.log(this.dataDisplayed);
   }
 
 }
