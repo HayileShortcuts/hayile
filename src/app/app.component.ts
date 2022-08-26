@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OS } from './models/ShortcutsEnvironment';
 import { FilterServicesService } from './services/filter-services.service';
 
 @Component({
@@ -10,22 +11,18 @@ export class AppComponent {
   title = 'hayile';
 
   dataReceivedFromService: any = [];
-  dataDisplayed: any;
+  dataDisplayed: any = [];
 
   searchedText = "";
-  selectedSO: 'Windows' | 'Apple' | 'Linux' = 'Windows'; // Sistema operativo por defecto Windows
+  selectedSO: OS = "Windows";
 
   constructor(private filterServicesService: FilterServicesService) {
     this.filterServicesService.getDataFromApi()
       .then(data => {
         this.dataReceivedFromService = data;
-        console.log(this.dataReceivedFromService)
-        console.log(this.selectedSO)
-
         this.dataDisplayed = this.dataReceivedFromService.filter((e: { operatingSystem: string; }) => {
           return e.operatingSystem === this.selectedSO;
         })
-        console.log(this.dataDisplayed)
       })
   }
 
@@ -33,19 +30,7 @@ export class AppComponent {
   getOs(OsToFilter: any) {
     this.selectedSO = OsToFilter;
     this.dataDisplayed = this.dataReceivedFromService.filter(((e: { operatingSystem: string; }) => e.operatingSystem == this.selectedSO));
-    console.log("EStoy cambiando el SO a "+ this.selectedSO);
-    console.log(this.dataDisplayed);
   }
-
-  macButton = document.getElementById("macButton")
-  winButton = document.getElementById("windowsButton")
-  linButton = document.getElementById("macButton")
-  
-  // toggleOs(){
-  //   if (this.selectedSO === "Windows"){
-  //     this.winButton.className += "selected"
-  //   }
-  // }
 
 }
 
