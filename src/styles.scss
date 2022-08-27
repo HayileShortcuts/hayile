@@ -1,7 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-@import "https://fonts.googleapis.com/css2?family=Jura&display=swap%27";
+// @import "https://fonts.googleapis.com/css2?family=Jura&display=swap%27";
 @import "./app/styles/variables.scss";
 
+@font-face {
+  font-family: Jura;
+  src: url("./assets/fonts/Jura-VariableFont_wght.ttf");
+  font-weight: 700;
+}
 @font-face {
   font-family: EspressoMono-Regular;
   src: url("./assets/fonts/EspressoMono-Regular.ttf");
@@ -23,7 +28,7 @@
 }
 
 body {
-  font-family: "Jura", sans-serif;
+  font-family:'Jura';
   font-size: 1rem;
   color: var(--terciary-color);
   background: var(--bg-color);
@@ -44,3 +49,4 @@ body {
   border-radius: 0.6rem;
 }
 
+html, body { height: 100%; }
