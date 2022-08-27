@@ -12,7 +12,7 @@ export class AppComponent {
   searchedText = '';
   dataReceivedFromService: any = [];
   dataDisplayed: any = [];
-  environment: string = 'visualstudiocode';
+  environment: string = 'VisualStudioCode';
   selectedSO: OS = 'Windows';
 
   constructor(private filterServicesService: FilterServicesService) {
