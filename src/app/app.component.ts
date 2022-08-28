@@ -15,16 +15,7 @@ export class AppComponent {
   environment: string = 'VisualStudioCode';
   selectedSO: OS = 'Windows';
 
-  constructor(private filterServicesService: FilterServicesService) {
-    this.filterServicesService.getDataFromApi(this.environment).then((data) => {
-      this.dataReceivedFromService = data;
-      this.dataDisplayed = this.dataReceivedFromService.filter(
-        (e: { operatingSystem: string }) => {
-          return e.operatingSystem === this.selectedSO;
-        }
-      );
-    });
-  }
+  constructor(private filterServicesService: FilterServicesService) {}
 
   getOs(OsToFilter: any) {
     this.selectedSO = OsToFilter;
@@ -33,17 +24,22 @@ export class AppComponent {
     );
   }
 
-  filterFromSearchBar(inputText: string) {
-    console.log(inputText);
-    console.log(this.dataDisplayed);
-    //   this.searchedText = inputText;
-
-    //   console.log(
-    //     this.dataDisplayed
-    //       .at(0)
-    //       .shortcuts.filter((e: any) =>
-    //         e.values.filter((e: any) => e.description.includes(inputText))
-    //       )
-    //   );
+  changeEnv(env: string) {
+    this.environment = env;
+    this.loadFromDB();
+  }
+  ngOnInit() {
+    this.loadFromDB();
+  }
+  loadFromDB() {
+    console.log(this.environment);
+    this.filterServicesService.getDataFromApi(this.environment).then((data) => {
+      this.dataReceivedFromService = data;
+      this.dataDisplayed = this.dataReceivedFromService.filter(
+        (e: { operatingSystem: string }) => {
+          return e.operatingSystem === this.selectedSO;
+        }
+      );
+    });
   }
 }

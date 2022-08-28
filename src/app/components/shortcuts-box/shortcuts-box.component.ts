@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FilterServicesService } from 'src/app/services/filter-services.service';
 
 @Component({
   selector: 'shortcuts-box',
