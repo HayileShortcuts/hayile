@@ -5,13 +5,10 @@ import { ShortcutsEnvironment } from '../models/ShortcutsEnvironment';
 @Injectable({
   providedIn: 'root',
 })
-
-
 export class FilterServicesService {
-
   dataReceivedFromApi: [] = [];
 
-  constructor() { }
+  constructor() {}
 
   url: string = 'http://localhost:fakeurl/';
   async getSingleEnvironment(obj: any) {
@@ -19,9 +16,9 @@ export class FilterServicesService {
     return response.data;
   }
 
-  getDataFromApi(): Promise<ShortcutsEnvironment> {
-    return axios.get('http://localhost:3000/VisualStudioCode')
-      .then(response => response.data)
+  getDataFromApi(environment: string): Promise<ShortcutsEnvironment> {
+    return axios
+      .get(`http://localhost:3000/${environment}`)
+      .then((response) => response.data);
   }
 }
-

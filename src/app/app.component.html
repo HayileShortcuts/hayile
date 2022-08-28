@@ -4,8 +4,8 @@
   <sidebar class="sidebar"></sidebar>
   <div class="shortcuts">
     <div class="shortcuts__container">
-      <searcher class="shortcuts__searcher"></searcher>
-      <shortcuts-box [dataFromService]="dataDisplayed" class="shortcuts__file"></shortcuts-box>
+      <searcher (inputText)="filterFromSearchBar($event)" class="shortcuts__searcher"></searcher>
+      <shortcuts-box [dataFromService]="dataDisplayed" [inputFromSearcher]="searchedText" class="shortcuts__file"></shortcuts-box>
     </div>
   </div>
 </div>
