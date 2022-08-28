@@ -1,4 +1,4 @@
-<h1>VSCode - {{systemSelected}}</h1>
+<h1>{{dataFromParent[0].environment}}- {{systemSelected}}</h1>
 <div class="titleOS-button">
   <img [ngClass]="{'selected': flagWindows}" (click)="osSelector('Windows')" id="windowsButton" class="titleOS-button-windows selected"
     src="../../../assets/icons/windows.svg" alt="logo windows" />

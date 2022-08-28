@@ -2,13 +2,29 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0;
   flex-direction: row;
+  display: none;
 }
+.mat-toolbar{
+  display: flex;
+  
+  color: white;
+  font-family:'Jura';
+  font-weight: 400;
+  width: 100%;
+  background-color: #884CAC;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
 
+  .example-spacer {
+  flex: 1 1 auto;
+}
 @media screen and (min-width: 1200px) {
-
+  .mat-toolbar{
+    display: none;
+  }
   .topbar__container {
+    display: flex;
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 10%;

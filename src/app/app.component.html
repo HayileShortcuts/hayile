@@ -1,7 +1,7 @@
 <header class="topbar"></header>
 <div class="content">
-  <title (OsSelected)="getOs($event)" [currentlyOs]="selectedSO" class="title"></title>
-  <sidebar class="sidebar"></sidebar>
+  <title (OsSelected)="getOs($event)" [dataFromParent]="dataDisplayed" class="title"></title>
+  <sidebar (envSelected)="changeEnv($event)" class="sidebar"></sidebar>
   <div class="shortcuts">
     <div class="shortcuts__container">
       <searcher (inputText)="filterFromSearchBar($event)" class="shortcuts__searcher"></searcher>

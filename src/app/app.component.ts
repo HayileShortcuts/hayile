@@ -19,7 +19,25 @@ export class AppComponent {
   
   
 
-  constructor(private filterServicesService: FilterServicesService) {
+  constructor(private filterServicesService: FilterServicesService) {}
+
+  getOs(OsToFilter: any) {
+    this.selectedSO = OsToFilter;
+    this.dataDisplayed = this.dataReceivedFromService.filter(
+      (e: { operatingSystem: string }) => e.operatingSystem == this.selectedSO
+    );
+  }
+
+
+  changeEnv(env: string) {
+    this.environment = env;
+    this.loadFromDB();
+  }
+  ngOnInit() {
+    this.loadFromDB();
+  }
+  loadFromDB() {
+    console.log(this.environment);
     this.filterServicesService.getDataFromApi(this.environment).then((data) => {
       this.dataReceivedFromService = data;
       this.dataDisplayed = this.dataReceivedFromService.filter(
@@ -29,55 +47,18 @@ export class AppComponent {
       );
     });
   }
-
-  getOs(OsToFilter: any) {
-    this.selectedSO = OsToFilter;
-    this.dataDisplayed = this.dataReceivedFromService.filter(
-      (e: { operatingSystem: string }) => e.operatingSystem == this.selectedSO
-    );
-  }
-
-  filterFromSearchBar(inputText: string) {
+  
+    filterFromSearchBar(inputText: string) {
       this.searchedText = inputText;
       // console.log(this.searchedText)
   }
-    // console.log(
-    //   this.dataDisplayed
-    //     .at(0)
-    //     .shortcuts.filter((e: any) =>
-    //       console.log(e.values.filter((e: any) => e.description.includes(inputText)))
-    //     )
-    // );
-    
-    
-    // let shortcutsFiletered = [];
-   
-    // for (let i=0; i < this.dataDisplayed[0].shortcuts.length; i++){ //Recorremos cada uno del array shortcuts
-    //   console.log("Vuelta "+ i);
-    //   let aux = [];
-    //   aux.push(this.dataDisplayed[0].shortcuts[i]);
-    
-    //   let alfalfa = this.dataDisplayed[0].shortcuts[i].values.filter((e: { description: string | string[]; }) => e.description.includes(inputText))
-      
+}
 
 
-    // }
 
-    // console.log(aux) 
       
  
   
-}
 
-    //   this.searchedText = inputText;
-
-    //   console.log(
-    //     this.dataDisplayed
-    //       .at(0)
-    //       .shortcuts.filter((e: any) =>
-    //         e.values.filter((e: any) => e.description.includes(inputText))
-    //       )
-    //   );
-  
 
 
