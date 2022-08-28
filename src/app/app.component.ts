@@ -9,11 +9,15 @@ import { FilterServicesService } from './services/filter-services.service';
 })
 export class AppComponent {
   title = 'hayile';
-  searchedText = '';
-  dataReceivedFromService: any = [];
-  dataDisplayed: any = [];
+  searchedText = "";
+  dataReceivedFromService: any = [];  // LLega todos los SO del entorno
+  dataDisplayed: any = [];  // Lo que del servicio filtrado para conseguir solo el SO desedeado
+  dataFiltered: any = [];  // dataDisplayed filtrado por el input de searchbar
   environment: string = 'VisualStudioCode';
   selectedSO: OS = 'Windows';
+  
+  
+  
 
   constructor(private filterServicesService: FilterServicesService) {}
 
@@ -23,6 +27,7 @@ export class AppComponent {
       (e: { operatingSystem: string }) => e.operatingSystem == this.selectedSO
     );
   }
+
 
   changeEnv(env: string) {
     this.environment = env;
@@ -42,4 +47,18 @@ export class AppComponent {
       );
     });
   }
+  
+    filterFromSearchBar(inputText: string) {
+      this.searchedText = inputText;
+      // console.log(this.searchedText)
+  }
 }
+
+
+
+      
+ 
+  
+
+
+
