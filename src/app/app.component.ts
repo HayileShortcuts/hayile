@@ -15,9 +15,8 @@ export class AppComponent {
   dataFiltered: any = [];  // dataDisplayed filtrado por el input de searchbar
   environment: string = 'VisualStudioCode';
   selectedSO: OS = 'Windows';
-  
-  
-  
+  statusOfMenu: boolean = false;
+
 
   constructor(private filterServicesService: FilterServicesService) {}
 
@@ -50,15 +49,10 @@ export class AppComponent {
   
     filterFromSearchBar(inputText: string) {
       this.searchedText = inputText;
-      // console.log(this.searchedText)
+  }
+  setStatusOfMenu(status: boolean){
+      this.statusOfMenu = status;
   }
 }
-
-
-
-      
- 
-  
-
 
 

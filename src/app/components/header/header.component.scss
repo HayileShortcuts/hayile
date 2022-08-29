@@ -19,7 +19,34 @@
   .example-spacer {
   flex: 1 1 auto;
 }
+.contenedor-padre {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+.navbar{
+ background-color: #884CAC;
+ color: white;
+ 
+}
+.navbar-menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.item-menu{
+  margin-left: 2rem;
+  text-decoration: none;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  transition: all ease 0.25s;
+}
+
 @media screen and (min-width: 1200px) {
+  .navbar{
+    display: none;
+  }
   .mat-toolbar{
     display: none;
   }

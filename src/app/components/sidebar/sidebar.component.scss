@@ -7,3 +7,9 @@ h2 {
   font-weight: 100;
   font-family: Jura, sans-serif;
 }
+
+.sidebar-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
