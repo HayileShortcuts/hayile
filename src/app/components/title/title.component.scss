@@ -1,5 +1,5 @@
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 
@@ -24,13 +24,18 @@ h1 {
     align-items: center;
     box-shadow: -2px 2px 5px 0 rgb(0 0 0 / 12%);
   }
+
+  .selected {
+    background: var(--quaternary-color)
+  }
 }
 
-.selected {
-  background: #7f3fa6ee !important;
-}
 
 @media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
   img {
     cursor: pointer;
   }

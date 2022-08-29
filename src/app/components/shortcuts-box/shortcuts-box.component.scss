@@ -7,18 +7,17 @@
 }
 
 .file__section {
-  padding-left: calc(var(--mobile-font-size) / 2);
 
   h2 {
     font-size: 1.2rem;
     font-weight: 600;
-    padding: 1.2rem 1rem;
+    padding: 1rem 0;
   }
 
   li {
     display: flex;
     flex-direction: column;
-    padding: 0.6rem 1rem;
+    padding: 0.6rem 0;
     border-bottom: 1px solid rgb(0 0 0 / 20%);
 
     &:hover {
@@ -39,10 +38,20 @@
   }
 }
 
+theme-toggle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 @media screen and (min-width: 1200px) {
   .file__section li {
     flex-direction: row;
     justify-content: space-between;
     margin-right: 0.8rem;
+  }
+
+  theme-toggle {
+    right: -4rem;
   }
 }

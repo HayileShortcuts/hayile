@@ -1,9 +1,16 @@
-a {
-  text-decoration: none;
-  color: var(--terciary-color);
+ul>div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 h2 {
   font-weight: 100;
   font-family: Jura, sans-serif;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--terciary-color);
 }

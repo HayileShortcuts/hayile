@@ -7,6 +7,7 @@
   src: url("./assets/fonts/Jura-VariableFont_wght.ttf");
   font-weight: 700;
 }
+
 @font-face {
   font-family: EspressoMono-Regular;
   src: url("./assets/fonts/EspressoMono-Regular.ttf");
@@ -28,11 +29,11 @@
 }
 
 body {
-  font-family:'Jura';
+  font-family: 'Jura';
   font-size: 1rem;
   color: var(--terciary-color);
   background: var(--bg-color);
-  min-height: 100vh;
+  max-height: 100vh;
 }
 
 ::-webkit-scrollbar {
@@ -49,4 +50,7 @@ body {
   border-radius: 0.6rem;
 }
 
-html, body { height: 100%; }
+html,
+body {
+  height: 100%;
+}
