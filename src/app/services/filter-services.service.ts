@@ -8,7 +8,7 @@ import { ShortcutsEnvironment } from '../models/ShortcutsEnvironment';
 export class FilterServicesService {
   dataReceivedFromApi: [] = [];
 
-  constructor() {}
+  constructor() { }
 
   url: string = 'http://localhost:fakeurl/';
   async getSingleEnvironment(obj: any) {
@@ -18,7 +18,7 @@ export class FilterServicesService {
 
   getDataFromApi(environment: string): Promise<ShortcutsEnvironment> {
     return axios
-      .get(`http://localhost:3000/${environment}`)
-      .then((response) => response.data);
+      .get(`https://hayile-backend.herokuapp.com/${environment}`)
+      .then((response) => response.data)
   }
 }

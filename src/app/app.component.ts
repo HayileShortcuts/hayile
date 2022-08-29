@@ -13,13 +13,13 @@ export class AppComponent {
   dataReceivedFromService: any = [];  // LLega todos los SO del entorno
   dataDisplayed: any = [];  // Lo que del servicio filtrado para conseguir solo el SO desedeado
   dataFiltered: any = [];  // dataDisplayed filtrado por el input de searchbar
-  environment: string = 'VisualStudioCode';
+  environment: string = 'vsc';
   selectedSO: OS = 'Windows';
-  
-  
-  
 
-  constructor(private filterServicesService: FilterServicesService) {}
+
+
+
+  constructor(private filterServicesService: FilterServicesService) { }
 
   getOs(OsToFilter: any) {
     this.selectedSO = OsToFilter;
@@ -37,7 +37,6 @@ export class AppComponent {
     this.loadFromDB();
   }
   loadFromDB() {
-    console.log(this.environment);
     this.filterServicesService.getDataFromApi(this.environment).then((data) => {
       this.dataReceivedFromService = data;
       this.dataDisplayed = this.dataReceivedFromService.filter(
@@ -47,18 +46,17 @@ export class AppComponent {
       );
     });
   }
-  
-    filterFromSearchBar(inputText: string) {
-      this.searchedText = inputText;
-      // console.log(this.searchedText)
+
+  filterFromSearchBar(inputText: string) {
+    this.searchedText = inputText;
   }
 }
 
 
 
-      
- 
-  
+
+
+
 
 
 
