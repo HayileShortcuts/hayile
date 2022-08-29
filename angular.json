@@ -114,7 +114,7 @@
           "options": {
             "outputPath": "dist/hayile",
             "netlifyToken": "camejo",
-            "siteId": ""
+            "siteId": "4444da59-ec88-4f7e-a081-225a3ee24def"
           }
         }
       }
