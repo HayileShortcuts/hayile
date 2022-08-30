@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import {Component, EventEmitter, HostListener, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'header',
@@ -6,27 +6,35 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  ngOnInit() {
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onWindowResize() {
+    this.closeMenu();
+  }
+
   statusOfMenu: boolean = false;
 
-  constructor() { }
+  constructor() {
+  }
+
   @Output()
   openedMenu = new EventEmitter<boolean>();
- 
   @Output()
   envSelected = new EventEmitter<string>();
-  
-  envSelect( env: string){
+
+  envSelect(env: string) {
     this.envSelected.emit(env);
     this.displayMenu();
   }
 
   displayMenu() {
     this.statusOfMenu = !this.statusOfMenu;
-    this.openedMenu.emit(this.statusOfMenu);
-
-  }
-  ngOnInit(): void {
   }
 
-
+  closeMenu() {
+    this.statusOfMenu = false;
+  }
 }

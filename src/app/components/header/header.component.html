@@ -1,30 +1,15 @@
 <div class="topbar__container">
+  <button (click)="displayMenu()">
+    <img src="../../../assets/icons/menu.svg" *ngIf="!statusOfMenu" alt="menu" class="topbar__menu-icon" width="28">
+    <img src="../../../assets/icons/exit.svg" *ngIf="statusOfMenu" alt="close" class="topbar__menu-icon" width="24">
+  </button>
+  <p class="logo-mobile">Hayile</p>
   <img class="topbar__logo" id="hayile-logo" src="../../../assets/icons/hayile-dark.svg" alt="Hayile logo"
-    width="100px">
-</div>
-
-<div class="contenedor-padre">
-  <nav class="navbar">
-    <button mat-icon-button (click)="displayMenu()">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>
-      Hayile
-    </span>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>person</mat-icon>
-    </button>
-  </nav>
-  <div class="navbar-menu" *ngIf="statusOfMenu">
-    <a class="item-menu" href='#' (click)="envSelect('vsc')">Visual Studio Code</a>
-    <hr>
-    <a class="item-menu" href='#'(click)="envSelect('GitDesktop')">Git</a>
-    <hr>
-    <a class="item-menu" href='#' (click)="envSelect('Vim')">Vim</a>
-    <hr>
-  </div>
+       width="100px">
+  <ul class="navbar-menu" *ngIf="statusOfMenu">
+    <li><p class="item-menu" (click)="envSelect('vsc')">Visual Studio Code</p></li>
+    <li><p class="item-menu" (click)="envSelect('GitDesktop')">Git</p></li>
+    <li><p class="item-menu" (click)="envSelect('Vim')">Vim</p></li>
+  </ul>
+  <div class="opacity" (click)="displayMenu()" *ngIf="statusOfMenu"></div>
 </div>

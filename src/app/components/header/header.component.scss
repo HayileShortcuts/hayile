@@ -1,70 +1,106 @@
 .topbar__container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 1.5rem;
+  background: var(--bg-topbar);
+  gap: 0.5rem;
+}
+
+button {
+  background: none;
+  border: none;
+  z-index: 5;
+  object-position: center;
+  object-fit: contain;
+}
+
+.topbar__menu-icon{
+  animation: grow 100ms ease-in-out;
+
+  @keyframes grow {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+
+  }
+}
+
+.topbar__logo {
   display: none;
 }
 
-.mat-toolbar {
-  display: flex;
+.logo-mobile {
+  font-size: 1.4rem;
   color: white;
-  font-family: 'Jura';
-  font-weight: 400;
-  width: 100%;
-  background-color: var(--bg-topbar);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 4px;
-}
-
-.example-spacer {
-  flex: 1 1 auto;
+  margin-top: -0.4rem;
 }
 
 .navbar-menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-}
-
-.item-menu {
-  margin-left: 2rem;
-  text-decoration: none;
-  padding: 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all ease 0.25s;
-}
-
-.contenedor-padre {
-  display: flex;
-  flex-flow: column;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background: var(--bg-topbar);
+  width: 15rem;
   height: 100%;
+  padding: 6rem 1.5rem;
+  animation: growRight 300ms ease-in-out;
+
+  @keyframes growRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+
+  }
+
+  li{
+    list-style: none;
+    p{
+      font-size: 1.2rem;
+      color: white;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+    }
+  }
 }
 
-.navbar {
-  background-color: var(--bg-topbar);
-  color: white;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  flex-direction: row;
-  height: 48px;
+.opacity{
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 0 1rem;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.61);
+  z-index: 1;
 }
+
 
 
 @media screen and (min-width: 1200px) {
+  .topbar__container {
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+    padding: 0;
+    background: var(--bg-color);
+
+    button,
+    .logo-mobile {
+      display: none;
+    }
+  }
+
+  .topbar__logo {
+    display: block;
+  }
+
   .navbar {
     display: none;
-  }
-
-  .mat-toolbar {
-    display: none;
-  }
-
-  .topbar__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    max-width: 1000px;
-    margin: 0 auto 1.5rem;
   }
 }

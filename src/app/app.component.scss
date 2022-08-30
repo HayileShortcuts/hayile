@@ -21,9 +21,14 @@
 
 .shortcuts__container {
   display: flex;
-  position: relative;
   flex-direction: column;
   border-radius: 0.5rem;
+  z-index: -1;
+}
+theme-toggle {
+  position: absolute;
+  bottom: 10rem;
+  right: 1.5rem;
 }
 
 .shortcuts__searcher {
@@ -31,12 +36,11 @@
   border-radius: 2rem;
   display: flex;
   padding: 1rem;
-  position: sticky;
-  top: 0;
   box-shadow: -1px 2px 4px 0 rgb(0 0 0 / 12%);
   box-sizing: border-box;
   background: #f6f6f9;
   margin-bottom: 1.5rem;
+  z-index: -1;
 }
 
 .shortcuts__file {
