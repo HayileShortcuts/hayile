@@ -11,13 +11,15 @@ export class HeaderComponent implements OnInit {
   constructor() { }
   @Output()
   openedMenu = new EventEmitter<boolean>();
+ 
   @Output()
   envSelected = new EventEmitter<string>();
-
-  envSelect(env: string) {
+  
+  envSelect( env: string){
     this.envSelected.emit(env);
-
+    this.displayMenu();
   }
+
   displayMenu() {
     this.statusOfMenu = !this.statusOfMenu;
     this.openedMenu.emit(this.statusOfMenu);
