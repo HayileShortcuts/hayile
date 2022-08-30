@@ -20,8 +20,8 @@
     </button>
   </nav>
   <div class="navbar-menu" *ngIf="statusOfMenu">
-    <a class="item-menu" href='#'>Visual Studio Code</a>
-    <a class="item-menu" href='#'>Git</a>
-    <a class="item-menu" href='#'>Vim</a>
+    <a class="item-menu" href='#' (click)="envSelect('vsc')">Visual Studio Code</a>
+    <a class="item-menu" href='#'(click)="envSelect('GitDesktop')">Git</a>
+    <a class="item-menu" href='#' (click)="envSelect('Vim')">Vim</a>
   </div>
 </div>
