@@ -3,8 +3,9 @@
   align-items: center;
   flex-direction: row;
   padding: 1.5rem;
+  height: 4rem;
   background: var(--bg-topbar);
-  gap: 0.5rem;
+  gap: 0.8rem;
 }
 
 button {
@@ -17,6 +18,7 @@ button {
 
 .topbar__menu-icon{
   animation: grow 100ms ease-in-out;
+  width: 2rem;
 
   @keyframes grow {
     0% {
@@ -42,7 +44,7 @@ theme-toggle {
 .logo-mobile {
   font-size: 1.4rem;
   color: white;
-  margin-top: -0.4rem;
+  margin-top: -0.2rem;
 }
 
 .navbar-menu {
@@ -54,24 +56,13 @@ theme-toggle {
   width: 15rem;
   height: 100%;
   padding: 6rem 1.5rem;
-  animation: growRight 300ms ease-in-out;
-
-  @keyframes growRight {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-
-  }
 
   li{
     list-style: none;
     p{
       font-size: 1.2rem;
       color: white;
-      margin-bottom: 0.5rem;
+      margin-bottom: 2rem;
       cursor: pointer;
     }
   }

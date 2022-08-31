@@ -1,9 +1,33 @@
 import {Component, EventEmitter, HostListener, OnInit, Output} from '@angular/core';
+import {animate, style, transition, trigger} from "@angular/animations";
 
 @Component({
   selector: 'header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  animations: [
+    trigger(
+      'openCloseAnimation',
+      [
+        transition(
+          ':enter',
+          [
+            style({ transform: 'translateX(-100%)'}),
+            animate('300ms ease-in-out',
+              style({ transform: 'translateX(0%)'}))
+          ]
+        ),
+        transition(
+          ':leave',
+          [
+            style({ transform: 'translateX(0%)'}),
+            animate('300ms ease-in-out',
+              style({ transform: 'translateX(-100%)'}))
+          ]
+        )
+      ]
+    )
+  ]
 })
 export class HeaderComponent implements OnInit {
 
@@ -37,4 +61,6 @@ export class HeaderComponent implements OnInit {
   closeMenu() {
     this.statusOfMenu = false;
   }
+
+
 }
