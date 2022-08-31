@@ -17,7 +17,6 @@ export class TitleComponent implements OnInit {
   environment: string | undefined;
 
   osSelector(operatingSystem: string) {
-    console.log(this.dataFromParent[0].environment)
     this.environment = this.dataFromParent[0].environment;
     this.systemSelected = operatingSystem;
     this.OsSelected.emit(operatingSystem);
