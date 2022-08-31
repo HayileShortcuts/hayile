@@ -1,6 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FilterServicesService } from 'src/app/services/filter-services.service';
-import { Value } from 'src/app/models/ShortcutsEnvironment';
 
 
 
@@ -14,11 +12,11 @@ export class ShortcutsBoxComponent {
   @Input() inputFromSearcher: any;
 
   dataForPaint: any = [];
-  
+
 
   constructor() {}
 
-  
+
   getActualSOShortCuts() {
     this.dataForPaint = this.dataFromService
     return this.dataForPaint[0].shortcuts
