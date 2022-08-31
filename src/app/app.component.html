@@ -1,5 +1,5 @@
-<header (openedMenu)="setStatusOfMenu($event)" (envSelected)="changeEnv($event)" class="topbar"></header>
-<div *ngIf="!statusOfMenu" class="content">
+<header (envSelected)="changeEnv($event)" class="topbar"></header>
+<div class="content">
   <title (OsSelected)="getOs($event)" [dataFromParent]="dataDisplayed" class="title"></title>
   <sidebar (envSelected)="changeEnv($event)" class="sidebar"></sidebar>
   <div class="shortcuts">

@@ -15,10 +15,6 @@ export class AppComponent {
   dataFiltered: any = [];  // dataDisplayed filtrado por el input de searchbar
   environment: string = 'vsc';
   selectedSO: OS = 'Windows';
-  statusOfMenu: boolean = false;
-
-
-
 
 
   constructor(private filterServicesService: FilterServicesService) { }
@@ -29,7 +25,6 @@ export class AppComponent {
       (e: { operatingSystem: string }) => e.operatingSystem == this.selectedSO
     );
   }
-
 
   changeEnv(env: string) {
     this.environment = env;
@@ -51,10 +46,6 @@ export class AppComponent {
 
   filterFromSearchBar(inputText: string) {
     this.searchedText = inputText;
-
-  }
-  setStatusOfMenu(status: boolean) {
-    this.statusOfMenu = status;
   }
 }
 
