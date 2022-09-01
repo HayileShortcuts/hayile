@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -11,6 +10,7 @@ import { TitleComponent } from './components/title/title.component';
 import { ShortcutsBoxComponent } from './components/shortcuts-box/shortcuts-box.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,15 +19,16 @@ import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.com
     SearcherComponent,
     TitleComponent,
     ShortcutsBoxComponent,
-    ThemeToggleComponent
+    ThemeToggleComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    MatProgressSpinnerModule,
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

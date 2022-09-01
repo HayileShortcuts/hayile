@@ -1,10 +1,11 @@
+<mat-spinner *ngIf="loading"></mat-spinner>
+
 <ul *ngFor="let dato of getActualSOShortCuts()" class="file__section">
   <li>
     <h2>
       {{ dato.tittle }}
     </h2>
   </li>
-
   <li *ngFor="let comando of getFilteredOptionsByUserQuery(dato.values)">
     <p>{{ comando.description }}</p>
     <p>{{ comando.command }}</p>

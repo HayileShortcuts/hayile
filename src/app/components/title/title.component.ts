@@ -3,17 +3,16 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 @Component({
   selector: 'title',
   templateUrl: './title.component.html',
-  styleUrls: ['./title.component.scss']
+  styleUrls: ['./title.component.scss'],
 })
-
 export class TitleComponent implements OnInit {
-  constructor() { }
+  constructor() {}
   @Output()
   OsSelected = new EventEmitter<string>();
 
   @Input()
   dataFromParent: any;
-  systemSelected = "Windows";
+  systemSelected = 'Windows';
   environment: string | undefined;
 
   osSelector(operatingSystem: string) {
@@ -40,6 +39,5 @@ export class TitleComponent implements OnInit {
   flagLinux: boolean = false;
   flagMac: boolean = false;
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 }
