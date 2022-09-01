@@ -9,15 +9,14 @@ import { FilterServicesService } from './services/filter-services.service';
 })
 export class AppComponent {
   title = 'hayile';
-  searchedText = "";
-  dataReceivedFromService: any = [];  // LLega todos los SO del entorno
-  dataDisplayed: any = [];  // Lo que del servicio filtrado para conseguir solo el SO desedeado
-  dataFiltered: any = [];  // dataDisplayed filtrado por el input de searchbar
+  searchedText = '';
+  dataReceivedFromService: any = []; // LLega todos los SO del entorno
+  dataDisplayed: any = []; // Lo que del servicio filtrado para conseguir solo el SO desedeado
+  dataFiltered: any = []; // dataDisplayed filtrado por el input de searchbar
   environment: string = 'vsc';
   selectedSO: OS = 'Windows';
 
-
-  constructor(private filterServicesService: FilterServicesService) { }
+  constructor(private filterServicesService: FilterServicesService) {}
 
   getOs(OsToFilter: any) {
     this.selectedSO = OsToFilter;
@@ -48,5 +47,3 @@ export class AppComponent {
     this.searchedText = inputText;
   }
 }
-
-

@@ -14,7 +14,6 @@ interface Value {
   command: string;
 }
 
-
 type OS = 'Windows' | 'MacOS' | 'Linux';
 
 export { ShortcutsEnvironment, Shortcut, Value, OS };
