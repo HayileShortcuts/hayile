@@ -1,5 +1,9 @@
 <mat-spinner *ngIf="loading"></mat-spinner>
 
+<div *ngIf="getActualSOShortCuts().length === 0">
+  <p>Ups!! Sorry, we have not found matches.</p>
+</div>
+
 <ul *ngFor="let dato of getActualSOShortCuts()" class="file__section">
   <li>
     <h2>
@@ -9,5 +13,6 @@
   <li *ngFor="let comando of getFilteredOptionsByUserQuery(dato.values)">
     <p>{{ comando.description }}</p>
     <p>{{ comando.command }}</p>
+    
   </li>
 </ul>
