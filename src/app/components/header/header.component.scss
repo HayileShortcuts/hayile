@@ -63,7 +63,6 @@ theme-toggle {
       font-size: 1.2rem;
       color: white;
       margin-bottom: 2rem;
-      cursor: pointer;
     }
   }
 }
@@ -99,5 +98,8 @@ theme-toggle {
 
   .navbar {
     display: none;
+  }
+  theme-toggle {
+    right: 7vw;
   }
 }
