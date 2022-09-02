@@ -8,12 +8,13 @@
   gap: 0.8rem;
 }
 
-button {
+.button__menu {
   background: none;
   border: none;
   z-index: 5;
   object-position: center;
   object-fit: contain;
+  position: absolute;
 }
 
 .topbar__menu-icon{
@@ -46,7 +47,7 @@ theme-toggle {
 .logo-mobile {
   font-size: 1.4rem;
   color: white;
-  margin-top: -0.2rem;
+  margin: 0 auto;
 }
 
 .navbar-menu {
