@@ -1,6 +1,8 @@
 <mat-spinner *ngIf="loading"></mat-spinner>
 
-<h2 *ngIf="getActualSOShortCuts().length === 0">Ups!! Sorry, we have not found matches.</h2>
+<div *ngIf="getActualSOShortCuts().length === 0">
+  <p>Ups!! Sorry, we have not found matches.</p>
+</div>
 
 <ul *ngFor="let dato of getActualSOShortCuts()" class="file__section">
   <li>
