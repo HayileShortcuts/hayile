@@ -40,14 +40,21 @@ theme-toggle {
 
 .topbar__logo {
   display: none;
-  height: 21px;
-  width: 100px;
+  height: 68px;
+  width: 170px;
 }
 
 .logo-mobile {
   font-size: 1.4rem;
   color: white;
   margin: 0 auto;
+}
+.logo-mobile:before{
+  content: "<";
+}
+
+.logo-mobile::after{
+  content: "/>";
 }
 
 .navbar-menu {
@@ -94,7 +101,10 @@ theme-toggle {
       display: none;
     }
   }
-
+  .btn{
+    display: "";
+    color: black;
+  }
   .topbar__logo {
     display: block;
   }

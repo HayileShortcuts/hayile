@@ -11,6 +11,7 @@ import { ShortcutsBoxComponent } from './components/shortcuts-box/shortcuts-box.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { UsersComponent } from './components/users/users.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     TitleComponent,
     ShortcutsBoxComponent,
     ThemeToggleComponent,
+    UsersComponent,
   ],
   imports: [
     BrowserModule,
