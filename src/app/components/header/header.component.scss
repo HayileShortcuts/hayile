@@ -14,7 +14,6 @@
   z-index: 5;
   object-position: center;
   object-fit: contain;
-  position: absolute;
 }
 
 .topbar__menu-icon{
@@ -30,12 +29,6 @@
     }
 
   }
-}
-
-theme-toggle {
-  position: fixed;
-  bottom: 7rem;
-  right: 2rem;
 }
 
 .topbar__logo {
@@ -88,6 +81,7 @@ theme-toggle {
     margin: 0 auto 2rem;
     padding: 0;
     background: var(--bg-color);
+    justify-content: space-between;
 
     button,
     .logo-mobile {
