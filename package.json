@@ -21,6 +21,9 @@
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
     "axios": "^0.27.2",
+    "mongodb": "^4.9.1",
+    "nodemon": "^2.0.19",
+    "pdfmake": "^0.2.5",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -31,6 +34,7 @@
     "@angular/compiler-cli": "^14.1.0",
     "@netlify-builder/deploy": "^5.0.0",
     "@types/jasmine": "~4.0.0",
+    "@types/pdfmake": "^0.2.1",
     "jasmine-core": "~4.2.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",

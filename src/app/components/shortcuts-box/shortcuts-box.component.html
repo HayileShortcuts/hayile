@@ -4,6 +4,10 @@
   <p>Ups!! Sorry, we have not found matches.</p>
 </div>
 
+<button (click)="createPdf()">
+  <p>Downloads this shortcuts on PDF</p>
+</button>
+
 <ul *ngFor="let dato of getActualSOShortCuts()" class="file__section">
   <li>
     <h2>

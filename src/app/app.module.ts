@@ -21,7 +21,7 @@ import { UsersComponent } from './components/users/users.component';
     TitleComponent,
     ShortcutsBoxComponent,
     ThemeToggleComponent,
-    UsersComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

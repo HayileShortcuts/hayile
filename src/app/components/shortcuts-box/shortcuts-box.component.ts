@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+import * as pdfMake from "pdfmake/build/pdfmake";
+import * as pdfFonts from 'pdfmake/build/vfs_fonts';
+(<any>pdfMake).vfs = pdfFonts.pdfMake.vfs;
 @Component({
   selector: 'shortcuts-box',
   templateUrl: './shortcuts-box.component.html',
@@ -29,5 +31,15 @@ export class ShortcutsBoxComponent {
         .toLowerCase()
         .includes(this.inputFromSearcher.toLowerCase())
     );
+  }
+
+  createPdf(){
+    const pdfDefinition: any = {
+      content: [{
+        pageSize: 'A4',
+        text: this.dataFromService 
+      }]
+    }
+    const pdf= pdfMake.createPdf(pdfDefinition).open()
   }
 }

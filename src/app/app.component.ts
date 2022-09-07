@@ -46,4 +46,6 @@ export class AppComponent {
   filterFromSearchBar(inputText: string) {
     this.searchedText = inputText;
   }
+
+  
 }
