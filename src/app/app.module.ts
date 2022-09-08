@@ -12,6 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { UsersComponent } from './components/users/users.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +31,10 @@ import { UsersComponent } from './components/users/users.component';
     BrowserAnimationsModule,
     MatProgressSpinnerModule,
     FormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      registrationStrategy: 'registerImmediately',
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

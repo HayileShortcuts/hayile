@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { OS } from './models/ShortcutsEnvironment';
 import { FilterServicesService } from './services/filter-services.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,14 @@ export class AppComponent {
   environment: string = 'vsc';
   selectedSO: OS = 'Windows';
 
-  constructor(private filterServicesService: FilterServicesService) {}
+  constructor(
+    private filterServicesService: FilterServicesService,
+    private route: ActivatedRoute) {
+    this.route.queryParams.subscribe(e => {
+      this.environment = e['environment'];
+      this.loadFromDB();
+    });
+  }
 
   getOs(OsToFilter: any) {
     this.selectedSO = OsToFilter;
@@ -30,17 +38,29 @@ export class AppComponent {
     this.loadFromDB();
   }
   ngOnInit() {
-    this.loadFromDB();
-  }
+     }
   loadFromDB() {
-    this.filterServicesService.getDataFromApi(this.environment).then((data) => {
+    
+    if (this.environment.length > 0){
+      this.filterServicesService.getDataFromApi(this.environment).then((data) => {
       this.dataReceivedFromService = data;
       this.dataDisplayed = this.dataReceivedFromService.filter(
         (e: { operatingSystem: string }) => {
           return e.operatingSystem === this.selectedSO;
         }
       );
-    });
+    });}
+    else {
+      this.environment = "vsc";
+      this.filterServicesService.getDataFromApi(this.environment).then((data) => {
+        this.dataReceivedFromService = data;
+        this.dataDisplayed = this.dataReceivedFromService.filter(
+          (e: { operatingSystem: string }) => {
+            return e.operatingSystem === this.selectedSO;
+          }
+        );
+      });
+    }
   }
 
   filterFromSearchBar(inputText: string) {
