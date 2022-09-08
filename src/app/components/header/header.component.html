@@ -9,9 +9,9 @@
   <!-- <button class="btn login">Login</button>
   <button class="btn signin">Sign In</button> -->
   <ul class="navbar-menu" *ngIf="statusOfMenu" [@openCloseAnimation]>
-    <li><p class="item-menu" (click)="envSelect('vsc')">Visual Studio Code</p></li>
-    <li><p class="item-menu" (click)="envSelect('gitdesktop')">Git</p></li>
-    <li><p class="item-menu" (click)="envSelect('figma')">Figma</p></li>
+    <li><p class="item-menu" (click)="envSelect('vsc')" [routerLink]="['']" [queryParams]="{ environment: 'vsc'}">Visual Studio Code</p></li>
+    <li><p class="item-menu" (click)="envSelect('gitdesktop')" [routerLink]="['']" [queryParams]="{ environment: 'gitdesktop'}">Git</p></li>
+    <li><p class="item-menu" (click)="envSelect('figma')" [routerLink]="['']" [queryParams]="{ environment: 'figma'}">Figma</p></li>
   </ul>
   <div class="opacity" (click)="closeMenu()" *ngIf="statusOfMenu"></div>
   <theme-toggle></theme-toggle>
