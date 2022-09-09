@@ -40,7 +40,9 @@ export class AppComponent {
   ngOnInit() {
      }
   loadFromDB() {
-    
+    if (!this.environment) {
+      this.environment = 'vsc';
+    }
     if (this.environment.length > 0){
       this.filterServicesService.getDataFromApi(this.environment).then((data) => {
       this.dataReceivedFromService = data;
