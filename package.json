@@ -23,8 +23,6 @@
     "axios": "^0.27.2",
     "html-to-pdfmake": "^2.4.5",
     "jspdf": "^2.5.1",
-    "mongodb": "^4.9.1",
-    "nodemon": "^2.0.19",
     "pdfmake": "^0.2.5",
     "rxjs": "~7.5.0",
     "svg-to-pdfkit": "^0.1.8",
