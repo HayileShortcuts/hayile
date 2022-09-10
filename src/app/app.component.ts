@@ -19,8 +19,9 @@ export class AppComponent {
 
   constructor(
     private filterServicesService: FilterServicesService,
-    private route: ActivatedRoute) {
-    this.route.queryParams.subscribe(e => {
+    private route: ActivatedRoute
+  ) {
+    this.route.queryParams.subscribe((e) => {
       this.environment = e['environment'];
       this.loadFromDB();
     });
@@ -37,35 +38,36 @@ export class AppComponent {
     this.environment = env;
     this.loadFromDB();
   }
-  ngOnInit() {
-     }
+  ngOnInit() {}
   loadFromDB() {
-    
-    if (this.environment.length > 0){
-      this.filterServicesService.getDataFromApi(this.environment).then((data) => {
-      this.dataReceivedFromService = data;
-      this.dataDisplayed = this.dataReceivedFromService.filter(
-        (e: { operatingSystem: string }) => {
-          return e.operatingSystem === this.selectedSO;
-        }
-      );
-    });}
-    else {
-      this.environment = "vsc";
-      this.filterServicesService.getDataFromApi(this.environment).then((data) => {
-        this.dataReceivedFromService = data;
-        this.dataDisplayed = this.dataReceivedFromService.filter(
-          (e: { operatingSystem: string }) => {
-            return e.operatingSystem === this.selectedSO;
-          }
-        );
-      });
+    console.log(this.environment);
+    if (this.environment != undefined) {
+      this.filterServicesService
+        .getDataFromApi(this.environment)
+        .then((data) => {
+          this.dataReceivedFromService = data;
+          this.dataDisplayed = this.dataReceivedFromService.filter(
+            (e: { operatingSystem: string }) => {
+              return e.operatingSystem === this.selectedSO;
+            }
+          );
+        });
+    } else {
+      this.environment = 'vsc';
+      this.filterServicesService
+        .getDataFromApi(this.environment)
+        .then((data) => {
+          this.dataReceivedFromService = data;
+          this.dataDisplayed = this.dataReceivedFromService.filter(
+            (e: { operatingSystem: string }) => {
+              return e.operatingSystem === this.selectedSO;
+            }
+          );
+        });
     }
   }
 
   filterFromSearchBar(inputText: string) {
     this.searchedText = inputText;
   }
-
-  
 }
