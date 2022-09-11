@@ -23,7 +23,7 @@ import { environment } from '../environments/environment';
     TitleComponent,
     ShortcutsBoxComponent,
     ThemeToggleComponent,
-    UsersComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

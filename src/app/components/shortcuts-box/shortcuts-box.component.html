@@ -4,15 +4,20 @@
   <p>Ups!! Sorry, we have not found matches.</p>
 </div>
 
-<ul *ngFor="let dato of getActualSOShortCuts()" class="file__section">
-  <li>
-    <h2>
-      {{ dato.tittle }}
-    </h2>
-  </li>
-  <li *ngFor="let comando of getFilteredOptionsByUserQuery(dato.values)">
-    <p>{{ comando.description }}</p>
-    <p>{{ comando.command }}</p>
-    
-  </li>
-</ul>
+<button (click)="createPdf()">
+  <p>Downloads this shortcuts on PDF</p>
+</button>
+<div id="pdfTable" #pdfTable>
+  <ul  *ngFor="let dato of getActualSOShortCuts()" class="file__section">
+    <li>
+      <h2>
+        {{ dato.tittle }}
+      </h2>
+    </li>
+    <li *ngFor="let comando of getFilteredOptionsByUserQuery(dato.values)">
+      <p>{{ comando.description }}</p>
+      <p>{{ comando.command }}</p>
+
+    </li>
+  </ul>
+</div>
