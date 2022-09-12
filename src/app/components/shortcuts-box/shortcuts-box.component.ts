@@ -56,7 +56,7 @@ export class ShortcutsBoxComponent {
             widths: [ 500, 'auto', ],
 
             body: [
-              [ 'Title', 'Shortcut Descrition' ],
+              [ 'Shortcuts'],
               [ html,  html],
             ]
           }
