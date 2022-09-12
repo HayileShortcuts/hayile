@@ -1,25 +1,19 @@
 .shortcuts__file {
+  border: none;
   display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  height: 60vh;
-  overflow-y: scroll;
-}
-button {
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 45px;
   padding: 0.5rem 0.5rem;
+  background: var(--secondary-color);
   border-radius: 0.8rem;
-  width: 165px;
-  box-shadow: -2px 2px 5px 0 rgb(0 0 0 / 12%);
-  align-self: center;
-  background:rgba(136, 127, 142, 0.3960784314);
-  color: white;
-  font-family: Jura, sans-serif;
-  border:none;
-  margin: 1rem;
-}
-
-button:hover {
-  background:rgb(136, 76, 172);
+  align-self: end;
+  margin-right: 10px;
+  img{
+    height: 1.5rem;
+    width: 1.5rem;
+  }
 }
 
 .file__section {
@@ -61,7 +55,7 @@ button:hover {
     margin-right: 0.8rem;
   }
 
-  theme-toggle {
-    right: -4rem;
+  .shortcuts__file{
+    cursor: pointer;
   }
 }
