@@ -16,11 +16,10 @@ export class ShortcutsBoxComponent {
   dataForPaint: any = [];
 
   constructor() {}
+  loading: boolean = true;
+
   getActualSOShortCuts() {
     this.dataForPaint = this.dataFromService;
-    if (this.dataForPaint.length === 0){
-      return []
-    }
     return this.dataForPaint[0].shortcuts.filter(
       (short: any) =>
         this.getFilteredOptionsByUserQuery(short.values).length > 0
@@ -28,6 +27,7 @@ export class ShortcutsBoxComponent {
   }
 
   getFilteredOptionsByUserQuery(values: any) {
+    this.loading = false;
     return values.filter((value: any) =>
       value.description
         .toLowerCase()
