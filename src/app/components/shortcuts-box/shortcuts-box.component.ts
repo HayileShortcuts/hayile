@@ -53,11 +53,11 @@ export class ShortcutsBoxComponent {
           layout: 'lightHorizontalLines', 
           table: {
             headerRows: 1,
-            widths: [ '900px' ],
+            widths: [ 900 ],
 
             body: [
               [ 'Shortcuts' ],
-              [ html,  html],
+              [ html],
             ]
           }
         }
