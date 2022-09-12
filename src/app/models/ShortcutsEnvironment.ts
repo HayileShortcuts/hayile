@@ -1,11 +1,11 @@
 interface ShortcutsEnvironment {
-  operatingSystem: OS;
+  operativeSystem: OS;
   environment: string;
   shortcuts: Shortcut[];
 }
 
 interface Shortcut {
-  tittle: string;
+  title: string;
   values: Value[];
 }
 

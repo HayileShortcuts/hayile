@@ -3,8 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  { path: ':environment', component: AppComponent }
-  ];
+  { path: '', component: AppComponent },
+  { path: ':environment', component: AppComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

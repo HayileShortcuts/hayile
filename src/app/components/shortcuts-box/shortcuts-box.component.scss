@@ -16,6 +16,22 @@
   }
 }
 
+button {
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.8rem;
+  width: 165px;
+  box-shadow: -2px 2px 5px 0 rgb(0 0 0 / 12%);
+  align-self: center;
+  background:rgba(136, 127, 142, 0.3960784314);
+  color: white;
+  font-family: Jura, sans-serif;
+  border:none;
+  margin: 1rem;
+}
+button:hover {
+  background:rgb(136, 76, 172);
+}
+
 .file__section {
 
   h2 {

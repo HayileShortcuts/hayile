@@ -15,16 +15,16 @@ export class TitleComponent implements OnInit {
   systemSelected = 'Windows';
   environment: string | undefined;
 
-  osSelector(operatingSystem: string) {
+  osSelector(operativeSystem: string) {
     this.environment = this.dataFromParent[0].environment;
-    this.systemSelected = operatingSystem;
-    this.OsSelected.emit(operatingSystem);
+    this.systemSelected = operativeSystem;
+    this.OsSelected.emit(operativeSystem);
 
-    if (operatingSystem === 'Windows') {
+    if (operativeSystem === 'Windows') {
       this.flagWindows = true;
       this.flagLinux = false;
       this.flagMac = false;
-    } else if (operatingSystem === 'Mac') {
+    } else if (operativeSystem === 'Mac') {
       this.flagWindows = false;
       this.flagLinux = false;
       this.flagMac = true;
