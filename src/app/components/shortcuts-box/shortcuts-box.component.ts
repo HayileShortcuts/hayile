@@ -15,10 +15,11 @@ export class ShortcutsBoxComponent {
   dataForPaint: any = [];
 
   constructor() {}
-  loading: boolean = true;
-
   getActualSOShortCuts() {
     this.dataForPaint = this.dataFromService;
+    if (this.dataForPaint.length === 0){
+      return []
+    }
     return this.dataForPaint[0].shortcuts.filter(
       (short: any) =>
         this.getFilteredOptionsByUserQuery(short.values).length > 0
@@ -26,14 +27,13 @@ export class ShortcutsBoxComponent {
   }
 
   getFilteredOptionsByUserQuery(values: any) {
-    this.loading = false;
     return values.filter((value: any) =>
       value.description
         .toLowerCase()
         .includes(this.inputFromSearcher.toLowerCase())
     );
   }
-
+  
   @ViewChild('pdfTable')
   pdfTable!: ElementRef;
 
@@ -53,7 +53,6 @@ export class ShortcutsBoxComponent {
           table: {
             headerRows: 1,
             widths: [ 500, 'auto', ],
-    
             body: [
               [ 'Title', 'Shortcut Descrition' ],
               [ html,  html],

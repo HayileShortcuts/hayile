@@ -1,11 +1,9 @@
-<mat-spinner *ngIf="loading"></mat-spinner>
-
 <div *ngIf="getActualSOShortCuts().length === 0">
   <p>Ups!! Sorry, we have not found matches.</p>
 </div>
 
-<button (click)="createPdf()">
-  <p>Downloads this shortcuts on PDF</p>
+<button class="shortcuts__file" (click)="createPdf()">
+  <img src="assets/icons/pdf-download.svg" alt="download pdf">
 </button>
 <div id="pdfTable" #pdfTable>
   <ul  *ngFor="let dato of getActualSOShortCuts()" class="file__section">
@@ -17,7 +15,7 @@
     <li *ngFor="let comando of getFilteredOptionsByUserQuery(dato.values)">
       <p>{{ comando.description }}</p>
       <p>{{ comando.command }}</p>
-      
+
     </li>
   </ul>
 </div>

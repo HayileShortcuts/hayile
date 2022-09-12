@@ -40,30 +40,28 @@ export class AppComponent {
   }
   ngOnInit() {}
   loadFromDB() {
-    console.log(this.environment);
-    if (this.environment != undefined) {
-      this.filterServicesService
-        .getDataFromApi(this.environment)
-        .then((data) => {
-          this.dataReceivedFromService = data;
-          this.dataDisplayed = this.dataReceivedFromService.filter(
-            (e: { operatingSystem: string }) => {
-              return e.operatingSystem === this.selectedSO;
-            }
-          );
-        });
-    } else {
+    if (!this.environment) {
       this.environment = 'vsc';
-      this.filterServicesService
-        .getDataFromApi(this.environment)
-        .then((data) => {
-          this.dataReceivedFromService = data;
-          this.dataDisplayed = this.dataReceivedFromService.filter(
-            (e: { operatingSystem: string }) => {
-              return e.operatingSystem === this.selectedSO;
-            }
-          );
-        });
+    }
+    if (this.environment.length > 0){
+      this.filterServicesService.getDataFromApi(this.environment).then((data) => {
+      this.dataReceivedFromService = data;
+      this.dataDisplayed = this.dataReceivedFromService.filter(
+        (e: { operatingSystem: string }) => {
+          return e.operatingSystem === this.selectedSO;
+        }
+      );
+    });}
+    else {
+      this.environment = "vsc";
+      this.filterServicesService.getDataFromApi(this.environment).then((data) => {
+        this.dataReceivedFromService = data;
+        this.dataDisplayed = this.dataReceivedFromService.filter(
+          (e: { operatingSystem: string }) => {
+            return e.operatingSystem === this.selectedSO;
+          }
+        );
+      });
     }
   }
 

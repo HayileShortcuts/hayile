@@ -1,9 +1,19 @@
 .shortcuts__file {
+  border: none;
   display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  height: 60vh;
-  overflow-y: scroll;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 45px;
+  padding: 0.5rem 0.5rem;
+  background: var(--secondary-color);
+  border-radius: 0.8rem;
+  align-self: end;
+  margin-right: 10px;
+  img{
+    height: 1.5rem;
+    width: 1.5rem;
+  }
 }
 
 button {
@@ -61,7 +71,7 @@ button:hover {
     margin-right: 0.8rem;
   }
 
-  theme-toggle {
-    right: -4rem;
+  .shortcuts__file{
+    cursor: pointer;
   }
 }
