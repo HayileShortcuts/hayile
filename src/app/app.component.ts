@@ -30,7 +30,7 @@ export class AppComponent {
   getOs(OsToFilter: any) {
     this.selectedSO = OsToFilter;
     this.dataDisplayed = this.dataReceivedFromService.filter(
-      (e: { operatingSystem: string }) => e.operatingSystem == this.selectedSO
+      (e: { operativeSystem: string }) => e.operativeSystem == this.selectedSO
     );
   }
 
@@ -47,8 +47,8 @@ export class AppComponent {
       this.filterServicesService.getDataFromApi(this.environment).then((data) => {
       this.dataReceivedFromService = data;
       this.dataDisplayed = this.dataReceivedFromService.filter(
-        (e: { operatingSystem: string }) => {
-          return e.operatingSystem === this.selectedSO;
+        (e: { operativeSystem: string }) => {
+          return e.operativeSystem === this.selectedSO;
         }
       );
     });}
@@ -57,8 +57,8 @@ export class AppComponent {
       this.filterServicesService.getDataFromApi(this.environment).then((data) => {
         this.dataReceivedFromService = data;
         this.dataDisplayed = this.dataReceivedFromService.filter(
-          (e: { operatingSystem: string }) => {
-            return e.operatingSystem === this.selectedSO;
+          (e: { operativeSystem: string }) => {
+            return e.operativeSystem === this.selectedSO;
           }
         );
       });
