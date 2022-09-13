@@ -10,9 +10,10 @@ export class FilterServicesService {
 
   constructor() {}
 
-  getDataFromApi(environment: string): Promise<ShortcutsEnvironment> {
-    return axios
-      .get(`https://hayile-backend.herokuapp.com/api/shortcuts/${environment}`)
-      .then((response) => response.data);
+  async getDataFromApi(environment: string): Promise<ShortcutsEnvironment> {
+    const response = await axios.get(
+      `https://hayile-backend.herokuapp.com/api/shortcuts/${environment}`
+    );
+    return response.data;
   }
 }
