@@ -1,7 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 // @import "https://fonts.googleapis.com/css2?family=Jura&display=swap%27";
 @import "./app/styles/variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 
+
+@font-face {
+  font-family: Rubik;
+  src: url("./assets/fonts/Rubik-VariableFont_wght.ttf");
+  font-weight: 700;
+}
 @font-face {
   font-family: Jura;
   src: url("./assets/fonts/Jura-VariableFont_wght.ttf");
@@ -29,7 +36,7 @@
 }
 
 body {
-  font-family: 'Jura';
+  font-family: 'Rubik';
   font-size: 1rem;
   color: var(--terciary-color);
   background: var(--bg-color);
