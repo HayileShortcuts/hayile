@@ -1,6 +1,13 @@
-import {Component, EventEmitter, HostListener, OnInit, Output} from '@angular/core';
-import {animate, style, transition, trigger} from "@angular/animations";
+import {
+  Component,
+  EventEmitter,
+  HostListener,
+  OnInit,
+  Output,
+} from '@angular/core';
+import { animate, style, transition, trigger } from '@angular/animations';
 import { ShortcutsBoxComponent } from '../shortcuts-box/shortcuts-box.component';
+import { __makeTemplateObject } from 'tslib';
 const html2pdf = require('html2pdf.js');
 
 @Component({
@@ -8,34 +15,20 @@ const html2pdf = require('html2pdf.js');
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   animations: [
-    trigger(
-      'openCloseAnimation',
-      [
-        transition(
-          ':enter',
-          [
-            style({ transform: 'translateX(-100%)'}),
-            animate('300ms ease-in-out',
-              style({ transform: 'translateX(0%)'}))
-          ]
-        ),
-        transition(
-          ':leave',
-          [
-            style({ transform: 'translateX(0%)'}),
-            animate('300ms ease-in-out',
-              style({ transform: 'translateX(-100%)'}))
-          ]
-        )
-      ]
-    )
-  ]
+    trigger('openCloseAnimation', [
+      transition(':enter', [
+        style({ transform: 'translateX(-100%)' }),
+        animate('300ms ease-in-out', style({ transform: 'translateX(0%)' })),
+      ]),
+      transition(':leave', [
+        style({ transform: 'translateX(0%)' }),
+        animate('300ms ease-in-out', style({ transform: 'translateX(-100%)' })),
+      ]),
+    ]),
+  ],
 })
-
 export class HeaderComponent implements OnInit {
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   @HostListener('window:resize', ['$event'])
   onWindowResize() {
@@ -44,8 +37,7 @@ export class HeaderComponent implements OnInit {
 
   statusOfMenu: boolean = false;
 
-  constructor() {
-  }
+  constructor() {}
 
   @Output()
   openedMenu = new EventEmitter<boolean>();
@@ -65,22 +57,26 @@ export class HeaderComponent implements OnInit {
     this.statusOfMenu = false;
   }
   
-
-  download(){
-    var ShortcutsBoxComponent = document.getElementById('pdfTable');
-    html2pdf(ShortcutsBoxComponent);
-    var opt = {
-    margin: 0,
-    filename: 'Shortcuts',
-    // image:        { type: 'jpeg', quality: 0.98 },
-    html2canvas:  { scale: 2 },
-    jsPDF:        { unit: 'px', format: 'a4', orientation: 'portrait' }
-  };
   
- 
-  html2pdf().from(ShortcutsBoxComponent).set(opt).open();
+
+  download() {
+    if (localStorage.getItem('theme') == "dark-theme"){
+      return alert("This function is not allowed in dark mode")
+    }
+    const ShortcutsBoxComponent: any = document.getElementById('pdfTable');
+    html2pdf(ShortcutsBoxComponent);
+    const opt = {
+      margin: 0,
+      filename: 'Shortcuts',
+      // image:        { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'px', format: 'a4', orientation: 'portrait',  },
+    };
+    
+    html2pdf().from(ShortcutsBoxComponent).set(opt).open();
   }
   
+
   // @ViewChild('pdfTable')
   // pdfTable!: ElementRef;
 
@@ -113,5 +109,4 @@ export class HeaderComponent implements OnInit {
   //   };
   //   pdfMake.createPdf(documentDefinition).open();
   // }
-
 }

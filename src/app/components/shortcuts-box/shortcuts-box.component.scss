@@ -10,30 +10,36 @@
   border-radius: 0.8rem;
   align-self: end;
   margin-right: 10px;
-  img{
+  img {
     height: 1.5rem;
     width: 1.5rem;
   }
 }
-.break-page {break-after: page;} .file__section {margin-bottom:10px; margin-left: 10px; padding: 5px}
+.break-page {
+  break-after: page;
+}
+.file__section {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  padding: 5px;
+}
 button {
   padding: 0.5rem 0.5rem;
   border-radius: 0.8rem;
   width: 165px;
   box-shadow: -2px 2px 5px 0 rgb(0 0 0 / 12%);
   align-self: center;
-  background:rgba(136, 127, 142, 0.3960784314);
+  background: rgba(136, 127, 142, 0.3960784314);
   color: white;
   font-family: Rubik, sans-serif;
-  border:none;
+  border: none;
   margin: 1rem;
 }
 button:hover {
-  background:rgb(136, 76, 172);
+  background: rgb(136, 76, 172);
 }
 
 .file__section {
-
   h2 {
     font-size: 1.2rem;
     font-weight: 600;
@@ -71,7 +77,7 @@ button:hover {
     margin-right: 0.8rem;
   }
 
-  .shortcuts__file{
+  .shortcuts__file {
     cursor: pointer;
   }
 }
