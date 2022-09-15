@@ -12,7 +12,7 @@
     <li><p class="item-menu" (click)="envSelect('vsc')" [routerLink]="['']" [queryParams]="{ environment: 'vsc'}">Visual Studio Code</p></li>
     <li><p class="item-menu" (click)="envSelect('gitdesktop')" [routerLink]="['']" [queryParams]="{ environment: 'gitdesktop'}">Git</p></li>
     <li><p class="item-menu" (click)="envSelect('figma')" [routerLink]="['']" [queryParams]="{ environment: 'figma'}">Figma</p></li>
-    <li><a href="https://github.com/HayileShortcuts/hayile-json" target="_blank" class="linkToGitHub">+ Add shortcuts</a></li>
+    <li><a href="https://github.com/HayileShortcuts/hayile-json" target="_blank" ><p class="item-menu linkToGitHub">+ Add shortcuts</p></a></li>
   </ul>
   <div class="opacity" (click)="closeMenu()" *ngIf="statusOfMenu"></div>
   <theme-toggle></theme-toggle>
