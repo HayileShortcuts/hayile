@@ -31,6 +31,7 @@ const html2pdf = require('html2pdf.js');
     )
   ]
 })
+
 export class HeaderComponent implements OnInit {
 
   ngOnInit() {
@@ -63,16 +64,19 @@ export class HeaderComponent implements OnInit {
   closeMenu() {
     this.statusOfMenu = false;
   }
+  
 
   download(){
     var ShortcutsBoxComponent = document.getElementById('pdfTable');
     html2pdf(ShortcutsBoxComponent);
     var opt = {
-    margin: [5, 5],
-    filename:'Shortcuts.pdf',
+    margin: 0,
+    filename: 'Shortcuts',
+    // image:        { type: 'jpeg', quality: 0.98 },
     html2canvas:  { scale: 2 },
-    jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+    jsPDF:        { unit: 'px', format: 'a4', orientation: 'portrait' }
   };
+  
  
   html2pdf().from(ShortcutsBoxComponent).set(opt).open();
   }

@@ -5,7 +5,7 @@
 <!-- <button class="shortcuts__file" (click)="createPdf()">
   <img src="assets/icons/pdf-download.svg" alt="download pdf">
 </button> -->
-<div id="pdfTable" #pdfTable>
+<div id="pdfTable" #pdfTable class="break-page">
   <ul  *ngFor="let dato of getActualSOShortCuts()" class="file__section">
     <li>
       <h2>
