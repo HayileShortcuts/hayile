@@ -41,6 +41,8 @@
   font-size: 1.4rem;
   color: white;
   margin: 0 auto;
+  position: relative;
+  left: 20px;
 }
 .logo-mobile:before{
   content: "<";
@@ -80,6 +82,32 @@
   z-index: 1;
 }
 
+.shortcuts__file {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 45px;
+  padding: 0.5rem 0.5rem;
+  background: var(--secondary-color);
+  border-radius: 0.8rem;
+  margin-right: 10px;
+  img{
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
+.shortcuts__file:hover {
+  background: rgb(208, 204, 210);
+}
+
+.buttons__options{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 
 
 @media screen and (min-width: 1200px) {
@@ -90,7 +118,7 @@
     background: var(--bg-color);
     justify-content: space-between;
 
-    button,
+    .button__menu,
     .logo-mobile {
       display: none;
     }
@@ -109,4 +137,21 @@
   theme-toggle {
     right: 7vw;
   }
+
+  .shortcuts__file {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 45px;
+  padding: 0.5rem 0.5rem;
+  background: rgb(208, 204, 210);
+  border-radius: 0.8rem;
+  margin-right: 10px;
+  img{
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
 }
