@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": ["html2pds.js"],
             "outputPath": "dist/hayile",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -39,6 +40,7 @@
             "serviceWorker": true,
             "ngswConfigPath": "ngsw-config.json"
           },
+          
           "configurations": {
             "production": {
               "budgets": [
