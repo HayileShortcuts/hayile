@@ -68,11 +68,10 @@ export class HeaderComponent implements OnInit {
     var ShortcutsBoxComponent = document.getElementById('pdfTable');
     html2pdf(ShortcutsBoxComponent);
     var opt = {
-    margin: 500,
+    margin: [5, 5],
     filename:'Shortcuts.pdf',
-    // image:        { type: 'jpeg', quality: 0.98 },
     html2canvas:  { scale: 2 },
-    jsPDF:        { unit: 'px', format: 'a4', orientation: 'portrait' }
+    jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
   };
  
   html2pdf().from(ShortcutsBoxComponent).set(opt).open();
