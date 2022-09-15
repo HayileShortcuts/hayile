@@ -107,10 +107,6 @@
     width: 1.5rem;
   }
 }
-.shortcuts__file:hover {
-  background: #7f3fa6;
-  cursor: pointer;
-}
 
 .buttons__options{
   display:flex;
@@ -149,21 +145,10 @@
   theme-toggle {
     right: 7vw;
   }
-
-  .shortcuts__file {
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 35px;
-  width: 45px;
-  padding: 0.5rem 0.5rem;
-  background: rgb(208, 204, 210);
-  border-radius: 0.8rem;
-  margin-right: 10px;
-  img{
-    height: 1.5rem;
-    width: 1.5rem;
-  }
+.shortcuts__file{
+  cursor: pointer;
 }
+  .shortcuts__file:hover {
+    background-color: var(--quaternary-color);
+    }
 }
