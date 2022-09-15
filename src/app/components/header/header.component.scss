@@ -41,8 +41,8 @@
   font-size: 1.4rem;
   color: white;
   margin: 0 auto;
-  position: relative;
   left: 20px;
+  font-weight: normal;
 }
 .logo-mobile:before{
   content: "<";
@@ -70,6 +70,10 @@
       margin-bottom: 2rem;
     }
   }
+}
+
+.linkToGitHub{
+  margin-top: 30px;
 }
 
 .opacity{
