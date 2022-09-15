@@ -1,6 +1,6 @@
 ## Welcome to Hayile 👋
 <br />
-<p><a href="https://hayile.netlify.app/" target="_blank"><img src="./src/assets/img/hayile-web.png" ></a></p>
+<p><a href="https://hayile.netlify.app/" target="_blank"><img src="./src/assets/img/hayile-web.jpg" ></a></p>
 
 🔸 Hayile is the platform where you can find your favourites shortcuts.
 
