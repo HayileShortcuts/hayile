@@ -1,27 +1,65 @@
-# Hayile
+## Welcome to Hayile 👋
+<br />
+<p><a href="https://hayile.netlify.app/" target="_blank"><img src="./src/assets/img/hayile-web.png" ></a></p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
+🔸 Hayile is the platform where you can find your favourites shortcuts.
 
-## Development server
+🔸 Developed by Dapper Drake Team as a final project of the SPEGC Full-Stack Course.
+<br />
+<br />
+## Technologies 🚀
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<br />
+  <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"><img src="https://img.shields.io/badge/-HTML5-000?style=for-the-badge&logo=html5&logoColor="></a>
+  <a href="https://sass-lang.com/"><img src="https://img.shields.io/badge/-SASS-000?style=for-the-badge&logo=Sass&logoColor="></a>
+  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/-TypeScript-000?style=for-the-badge&logo=TypeScript&logoColor="></a>
+  <a href="https://angular.io/"><img src="https://img.shields.io/badge/-Angular-000?style=for-the-badge&logo=Angular&logoColor="></a>
+  <br />
+  <a href="https://nodejs.org/en/"><img src="https://img.shields.io/badge/-Node.js-000?style=for-the-badge&logo=Node.js&logoColor="></a>
+  <a href="https://expressjs.com/"><img src="https://img.shields.io/badge/-Express-000?style=for-the-badge&logo=Express&logoColor="></a>
+  <a href="https://www.mongodb.com/"><img src="https://img.shields.io/badge/-MongoDB-000?style=for-the-badge&logo=MongoDB&logoColor="></a>
+  <br />
+  <a href="https://www.docker.com/"><img src="https://img.shields.io/badge/-Docker-000?style=for-the-badge&logo=Docker&logoColor="></a>
+  <a href="https://www.netlify.com/"><img src="https://img.shields.io/badge/-Netlify-000?style=for-the-badge&logo=Netlify&logoColor="></a>
+  <a href="https://www.heroku.com/"><img src="https://img.shields.io/badge/-Heroku-000?style=for-the-badge&logo=Heroku&logoColor="></a>
+  <br />
+  <br />
 
-## Code scaffolding
+## Authors 💻
+<br />
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+👨‍💻 **Josué Hernández**
 
-## Build
+  * Github: [@Josue](https://github.com/J0suu)
+  * LinkedIn: [@Josue](https://www.linkedin.com/in/joshernan/)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+👩‍💻  **Alexia Schapira**
 
-## Running unit tests
+* Github: [@Alexia](https://github.com/ale-schapira)
+* LinkedIn: [@Alexia](https://www.linkedin.com/in/alexia-schapira/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+👨‍💻 **Pedro Rodríguez**
 
-## Running end-to-end tests
+* Github: [@Pedro](https://github.com/MaximoDM)
+* LinkedIn: [@Pedro](https://www.linkedin.com/in/pedro-rodríguez-trujillo/)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+👩‍💻  **Sheila Alarcón**
 
-## Further help
+* Github: [@Sheila](https://github.com/sheilaalamoalarcon)
+* LinkedIn: [@Sheila](https://www.linkedin.com/in/sheila-%C3%A1lamo-alarc%C3%B3n-ilustraciones/)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+👨‍💻 **Alexis Plettener**
+
+* Github: [@Alexis](https://github.com/alexxispn/)
+* LinkedIn: [@Alexis](https://www.linkedin.com/in/alexis-plettener-nguyen)
+  <br />
+  <br />
+
+## Show your support ⭐️
+
+Give a ⭐️ if this project helped you!
+
+<br />
+<a href="#"><img src="https://readme-typing-svg.herokuapp.com?font=Rubik&size=32&pause=1000&color=7F3FA6EE&width=435&lines=Thank+you!"></a>
+
+
