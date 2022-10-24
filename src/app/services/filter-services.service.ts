@@ -12,7 +12,7 @@ export class FilterServicesService {
 
   async getDataFromApi(environment: string): Promise<ShortcutsEnvironment> {
     const response = await axios.get(
-      `https://hayile-backend.herokuapp.com/api/shortcuts/${environment}`
+      `https://hayile-hayileshortcuts.koyeb.app/api/shortcuts/${environment}`
     );
     return response.data;
   }
