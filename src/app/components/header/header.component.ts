@@ -67,6 +67,9 @@ export class HeaderComponent implements OnInit {
   
 
   download(){
+    if (localStorage.getItem('theme') == "dark-theme"){
+      return alert("This function is not allowed in dark mode")
+    }
     var ShortcutsBoxComponent = document.getElementById('pdfTable');
     html2pdf(ShortcutsBoxComponent);
     var opt = {

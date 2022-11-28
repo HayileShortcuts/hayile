@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import { OS } from './models/ShortcutsEnvironment';
-import { FilterServicesService } from './services/filter-services.service';
-import { ActivatedRoute } from '@angular/router';
+import {Component} from '@angular/core';
+import {OS} from './models/ShortcutsEnvironment';
+import {FilterServicesService} from './services/filter-services.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -38,31 +38,20 @@ export class AppComponent {
     this.environment = env;
     this.loadFromDB();
   }
-  ngOnInit() {}
+
+  ngOnInit() {
+  }
+
   loadFromDB() {
-    if (!this.environment) {
-      this.environment = 'vsc';
-    }
-    if (this.environment.length > 0){
-      this.filterServicesService.getDataFromApi(this.environment).then((data) => {
+    if (!this.environment) this.environment = 'vsc';
+    this.filterServicesService.getDataFromApi(this.environment).then((data) => {
       this.dataReceivedFromService = data;
       this.dataDisplayed = this.dataReceivedFromService.filter(
         (e: { operativeSystem: string }) => {
           return e.operativeSystem === this.selectedSO;
         }
       );
-    });}
-    else {
-      this.environment = "vsc";
-      this.filterServicesService.getDataFromApi(this.environment).then((data) => {
-        this.dataReceivedFromService = data;
-        this.dataDisplayed = this.dataReceivedFromService.filter(
-          (e: { operativeSystem: string }) => {
-            return e.operativeSystem === this.selectedSO;
-          }
-        );
-      });
-    }
+    });
   }
 
   filterFromSearchBar(inputText: string) {
